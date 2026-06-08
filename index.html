@@ -2,23 +2,27 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
-    <title>Laboratório ESP32 NAT Router - KaliSonic</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>ESP32 NAT Router - KaliSonic</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./styles/styles.css" />
   </head>
   <body>
-    <!-- TOP BAR -->
+    <!-- ==================== TOP BAR ==================== -->
     <div class="top-bar">
       <button class="menu-toggle" id="openMenu">
         <i class="fas fa-bars"></i>
         <span>Menu</span>
       </button>
-      <a href="#" class="top-bar-brand"> <i class="fab fa-linux"></i> ESP32U ROUTER </a>
-      <a href="#" class="btn-outline"> <i class="fas fa-home"></i> Voltar </a>
+      <a href="#" class="top-bar-brand"> <i class="fab fa-linux"></i> <span>Lab Kali Sonic ESP32</span> </a>
+      <a href="#" class="btn-outline"> <i class="fas fa-home"></i> <span>Voltar</span> </a>
     </div>
 
-    <!-- SIDEBAR -->
+    <!-- ==================== SIDEBAR ==================== -->
     <div class="sidebar" id="sidebar">
       <div class="sidebar-header">
         <h3><i class="fas fa-compass"></i> Navegação</h3>
@@ -26,21 +30,27 @@
           <i class="fas fa-times"></i>
         </button>
       </div>
-      <ul class="nav-modules" id="navModules">
-        <!-- Links gerados dinamicamente via JS -->
-      </ul>
+      <ul class="nav-modules" id="navModules"></ul>
     </div>
     <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
-    <!-- HERO SECTION -->
+    <!-- ==================== HERO ==================== -->
     <section class="hero">
-      <div class="badge-lab"><i class="fas fa-microchip"></i> Laboratório Prático</div>
-      <h1>ESP32 NAT Router<br />KaliSonic</h1>
-      <p>Transformando um ESP32-WROOM-32U em um roteador Wi-Fi completo com NAT, DHCP, Firewall, VPN e muito mais.</p>
+      <div class="container">
+        <div class="badge-lab"><i class="fas fa-microchip"></i> Laboratório Prático | ESP32 NAT Router</div>
+        <h1>ESP32 NAT ROUTER<br />KaliSonic</h1>
+        <p>Transformando um ESP32-WROOM-32U em um roteador Wi-Fi completo com NAT, DHCP, Firewall, VPN, Port Forward e muito mais.</p>
+        <div style="margin-top: 2rem">
+          <i class="fab fa-linux" style="color: var(--primary); font-size: 2rem; margin: 0 0.5rem"></i>
+          <i class="fas fa-microchip" style="color: var(--primary); font-size: 2rem; margin: 0 0.5rem"></i>
+          <i class="fas fa-wifi" style="color: var(--primary); font-size: 2rem; margin: 0 0.5rem"></i>
+          <i class="fas fa-shield-alt" style="color: var(--primary); font-size: 2rem; margin: 0 0.5rem"></i>
+        </div>
+      </div>
     </section>
 
     <div class="container">
-      <!-- SEÇÃO 1.0 - INTRODUÇÃO -->
+      <!-- ==================== SEÇÃO 1 - JORNADA ==================== -->
       <section id="secao1-0" class="section">
         <h2 class="section-title">
           <i class="fas fa-flag-checkered"></i>
@@ -48,65 +58,62 @@
         </h2>
         <div class="card">
           <i class="fas fa-trophy"></i>
-          <p>
-            <strong>Parabéns, Allan!</strong> Você evoluiu de um ESP32 criando AP sem internet para um
-            <strong>ESP32 NAT Router</strong> completo.
-          </p>
-          <div class="ascii-arch">
+          <p><strong>Parabéns, Allan.</strong> Você saiu de:</p>
+          <div class="ascii-art">
             <pre>
-┌─────────────────────────────────────────────────────────┐
-│  ESP32 criando AP sem internet                          │
-│         ↓                                               │
-│  ESP32 NAT Router                                       │
-│         ↓                                               │
-│  Conectado na rede "Sousa 2"                            │
-│         ↓                                               │
-│  Criando rede "KaliSonic"                               │
-│         ↓                                               │
-│  Distribuindo internet REAL para clientes               │
-└─────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────┐
+│                                                             │
+│   ESP32 criando AP sem internet                             │
+│         ↓                                                   │
+│   ESP32 NAT Router                                          │
+│         ↓                                                   │
+│   Conectado na rede Sousa 2                                 │
+│         ↓                                                   │
+│   Criando rede KaliSonic                                    │
+│         ↓                                                   │
+│   Distribuindo internet real para clientes                  │
+│                                                             │
+└─────────────────────────────────────────────────────────────┘
                 </pre
             >
           </div>
           <div class="alert alert-success">
             <i class="fas fa-check-circle"></i>
-            <span>Você agora tem um roteador Wi-Fi funcional baseado em ESP32 — um marco importante!</span>
+            <strong>Isso é um marco importante</strong> — porque agora você tem um roteador Wi-Fi funcional baseado em ESP32.
           </div>
         </div>
       </section>
 
-      <!-- SEÇÃO 1.1 - OBJETIVO -->
+      <!-- ==================== SEÇÃO 1.1 - OBJETIVO ==================== -->
       <section id="secao1-1" class="section">
         <h2 class="section-title">
           <i class="fas fa-bullseye"></i>
           <span class="section-number">1.1</span> Objetivo do Projeto
         </h2>
         <div class="card">
-          <i class="fas fa-microchip"></i>
           <p>Transformar um <strong>ESP32-WROOM-32U</strong> em um roteador Wi-Fi capaz de:</p>
-          <ul style="margin-top: 1rem; margin-left: 1.5rem">
-            <li><i class="fas fa-wifi"></i> Conectar em uma rede existente</li>
-            <li><i class="fas fa-network-wired"></i> Criar uma nova rede Wi-Fi</li>
-            <li><i class="fas fa-globe"></i> Distribuir internet aos clientes</li>
-            <li><i class="fas fa-exchange-alt"></i> Fazer NAT (Network Address Translation)</li>
-            <li><i class="fas fa-address-card"></i> Fornecer DHCP</li>
-            <li><i class="fas fa-forward"></i> Realizar Port Forwarding</li>
-            <li><i class="fas fa-shield-alt"></i> Aplicar Firewall ACL</li>
-            <li><i class="fas fa-lock"></i> Operar VPN WireGuard</li>
-            <li><i class="fas fa-tachometer-alt"></i> Permitir administração via Web</li>
-          </ul>
+          <div class="check-list" style="margin-top: 1.5rem">
+            <div class="check-list-item"><i class="fas fa-check-circle"></i> Conectar em uma rede existente</div>
+            <div class="check-list-item"><i class="fas fa-check-circle"></i> Criar uma nova rede Wi-Fi</div>
+            <div class="check-list-item"><i class="fas fa-check-circle"></i> Distribuir internet aos clientes</div>
+            <div class="check-list-item"><i class="fas fa-check-circle"></i> Fazer NAT (Network Address Translation)</div>
+            <div class="check-list-item"><i class="fas fa-check-circle"></i> Fornecer DHCP</div>
+            <div class="check-list-item"><i class="fas fa-check-circle"></i> Realizar Port Forwarding</div>
+            <div class="check-list-item"><i class="fas fa-check-circle"></i> Aplicar Firewall ACL</div>
+            <div class="check-list-item"><i class="fas fa-check-circle"></i> Operar VPN WireGuard</div>
+            <div class="check-list-item"><i class="fas fa-check-circle"></i> Permitir administração via Web</div>
+          </div>
         </div>
       </section>
 
-      <!-- SEÇÃO 1.2 - ARQUITETURA -->
+      <!-- ==================== SEÇÃO 1.2 - ARQUITETURA ==================== -->
       <section id="secao1-2" class="section">
         <h2 class="section-title">
           <i class="fas fa-project-diagram"></i>
           <span class="section-number">1.2</span> Arquitetura Final
         </h2>
-        <div class="card">
-          <div class="ascii-arch">
-            <pre>
+        <div class="ascii-art">
+          <pre>
                     ╔══════════════════╗
                     ║    Internet      ║
                     ╚══════════════════╝
@@ -119,11 +126,11 @@
                     ╚═══════════════════╝
                             │
                             ▼
-                    ╔═════════════════════╗
-                    ║ ESP32 NAT Router    ║
-                    ║ STA IP: 10.0.0.103  ║
-                    ║ AP IP : 192.168.4.1 ║
-                    ╚═════════════════════╝
+                    ╔════════════════════╗
+                    ║ ESP32 NAT Router   ║
+                    ║ STA IP: 10.0.0.103 ║
+                    ║ AP IP : 192.168.4.1║
+                    ╚════════════════════╝
                             │
                             ▼
                     ╔══════════════════╗
@@ -131,18 +138,17 @@
                     ║ 192.168.4.0/24   ║
                     ╚══════════════════╝
                             │
-                    ┌──────────────┴──────┐
-                    ▼                     ▼
-                   ╔═══════╗       ╔════════╗
-                   ║Celular║       ║Notebook║
-                   ╚═══════╝       ╚════════╝
-                </pre
-            >
-          </div>
+                    ┌───────┴───────┐
+                    ▼               ▼
+              ╔═══════╗       ╔════════╗
+              ║Celular║       ║Notebook║
+              ╚═══════╝       ╚════════╝
+            </pre
+          >
         </div>
       </section>
 
-      <!-- SEÇÃO 1.3 - HARDWARE -->
+      <!-- ==================== SEÇÃO 1.3 - HARDWARE ==================== -->
       <section id="secao1-3" class="section">
         <h2 class="section-title">
           <i class="fas fa-microchip"></i>
@@ -152,40 +158,43 @@
           <i class="fas fa-microchip"></i>
           <h3>ESP32-WROOM-32U</h3>
           <table class="table-custom">
-            <tr>
-              <th>Característica</th>
-              <th>Especificação</th>
-            </tr>
-            <tr>
-              <td>Processador</td>
-              <td>Dual Core Xtensa LX6</td>
-            </tr>
-            <tr>
-              <td>Frequência</td>
-              <td>240 MHz</td>
-            </tr>
-            <tr>
-              <td>Wi-Fi</td>
-              <td>2.4 GHz 802.11 b/g/n</td>
-            </tr>
-            <tr>
-              <td>Bluetooth</td>
-              <td>BLE 4.2</td>
-            </tr>
-            <tr>
-              <td>Flash</td>
-              <td>4 MB</td>
-            </tr>
-            <tr>
-              <td>Antena</td>
-              <td>Externa U.FL</td>
-            </tr>
+            <thead>
+              <tr>
+                <th>Característica</th>
+                <th>Especificação</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Processador</td>
+                <td>Dual Core Xtensa LX6</td>
+              </tr>
+              <tr>
+                <td>Frequência</td>
+                <td>240 MHz</td>
+              </tr>
+              <tr>
+                <td>Wi-Fi</td>
+                <td>2.4 GHz 802.11 b/g/n</td>
+              </tr>
+              <tr>
+                <td>Bluetooth</td>
+                <td>BLE 4.2</td>
+              </tr>
+              <tr>
+                <td>Flash</td>
+                <td>4 MB</td>
+              </tr>
+              <tr>
+                <td>Antena</td>
+                <td>Externa U.FL</td>
+              </tr>
+            </tbody>
           </table>
-          <i class="fab fa-linux" style="font-size: 3rem; display: block; text-align: center"></i>
         </div>
       </section>
 
-      <!-- SEÇÃO 1.4 - FIRMWARE -->
+      <!-- ==================== SEÇÃO 1.4 - FIRMWARE ==================== -->
       <section id="secao1-4" class="section">
         <h2 class="section-title">
           <i class="fas fa-code"></i>
@@ -198,7 +207,7 @@
         </div>
       </section>
 
-      <!-- SEÇÃO 1.5 - INSTALAÇÃO -->
+      <!-- ==================== SEÇÃO 1.5 - INSTALAÇÃO ==================== -->
       <section id="secao1-5" class="section">
         <h2 class="section-title">
           <i class="fas fa-download"></i>
@@ -213,7 +222,7 @@
           <h3><i class="fas fa-upload"></i> Gravar Firmware</h3>
           <div class="alert alert-info">
             <i class="fas fa-exclamation-triangle"></i>
-            <span><strong>IMPORTANTE:</strong> Os offsets corretos são os seguintes:</span>
+            <strong>IMPORTANTE:</strong> Os offsets corretos foram:
           </div>
           <div class="terminal">
             <pre>
@@ -231,24 +240,24 @@ esptool --chip esp32 \
         </div>
       </section>
 
-      <!-- SEÇÃO 2.1 - CONFIGURAÇÃO INICIAL -->
+      <!-- ==================== SEÇÃO 2.1 - CONFIGURAÇÃO INICIAL ==================== -->
       <section id="secao2-1" class="section">
         <h2 class="section-title">
           <i class="fas fa-sliders-h"></i>
           <span class="section-number">2.1</span> Configuração Inicial
         </h2>
         <div class="card">
-          <h3><i class="fas fa-wifi"></i> Configurar Internet (STA)</h3>
+          <h3><i class="fas fa-wifi"></i> Configurar Internet</h3>
           <div class="terminal">
             <pre>set_sta "Sousa 2" "061102dhi"</pre>
           </div>
-          <p><i class="fas fa-info-circle"></i> <strong>Significado:</strong> STA = Station → Rede que o ESP32 vai acessar</p>
+          <p><i class="fas fa-info-circle"></i> <strong>Significado:</strong> STA = Station — Rede que o ESP32 vai acessar</p>
 
           <h3><i class="fas fa-broadcast-tower"></i> Configurar AP</h3>
           <div class="terminal">
             <pre>set_ap "KaliSonic" "drone2025"</pre>
           </div>
-          <p><i class="fas fa-info-circle"></i> <strong>Significado:</strong> AP = Access Point → Rede criada pelo ESP32</p>
+          <p><i class="fas fa-info-circle"></i> <strong>Significado:</strong> AP = Access Point — Rede criada pelo ESP32</p>
 
           <h3><i class="fas fa-sync-alt"></i> Reiniciar</h3>
           <div class="terminal">
@@ -257,21 +266,18 @@ esptool --chip esp32 \
         </div>
       </section>
 
-      <!-- SEÇÃO 2.2 - VERIFICAÇÃO -->
+      <!-- ==================== SEÇÃO 2.2 - VERIFICAÇÃO ==================== -->
       <section id="secao2-2" class="section">
         <h2 class="section-title">
           <i class="fas fa-check-double"></i>
           <span class="section-number">2.2</span> Verificação
         </h2>
         <div class="card">
-          <h3><i class="fas fa-chart-line"></i> Status</h3>
+          <h3>Status</h3>
           <div class="terminal">
             <pre>show status</pre>
           </div>
-          <div class="alert alert-success">
-            <i class="fas fa-check"></i>
-            <span>Exemplo de saída:</span>
-          </div>
+          <p><strong>Exemplo de saída:</strong></p>
           <div class="terminal">
             <pre>
 Uplink AP: Sousa 2
@@ -282,7 +288,7 @@ Connected Clients: 1</pre
             >
           </div>
 
-          <h3><i class="fas fa-cog"></i> Configuração</h3>
+          <h3>Configuração</h3>
           <div class="terminal">
             <pre>show config</pre>
           </div>
@@ -290,14 +296,14 @@ Connected Clients: 1</pre
         </div>
       </section>
 
-      <!-- SEÇÃO 2.3 - SCANNER -->
+      <!-- ==================== SEÇÃO 2.3 - SCANNER ==================== -->
       <section id="secao2-3" class="section">
         <h2 class="section-title">
           <i class="fas fa-search"></i>
           <span class="section-number">2.3</span> Scanner Wi-Fi
         </h2>
         <div class="card">
-          <p>Escanear redes disponíveis:</p>
+          <p>Escanear redes:</p>
           <div class="terminal">
             <pre>scan</pre>
           </div>
@@ -305,19 +311,19 @@ Connected Clients: 1</pre
         </div>
       </section>
 
-      <!-- SEÇÃO 2.4 - ALTERAÇÕES -->
+      <!-- ==================== SEÇÃO 2.4 - ALTERAÇÕES ==================== -->
       <section id="secao2-4" class="section">
         <h2 class="section-title">
           <i class="fas fa-pen"></i>
           <span class="section-number">2.4</span> Alterações de Rede
         </h2>
         <div class="card">
-          <h3>Alterar nome da rede (AP)</h3>
+          <h3>Alterar Nome da Rede</h3>
           <div class="terminal">
             <pre>set_ap "MinhaRede" "Senha123"</pre>
           </div>
 
-          <h3>Alterar rede de internet (STA)</h3>
+          <h3>Alterar Rede de Internet</h3>
           <div class="terminal">
             <pre>set_sta "NovaRede" "NovaSenha"</pre>
           </div>
@@ -336,28 +342,30 @@ Connected Clients: 1</pre
         </div>
       </section>
 
-      <!-- SEÇÃO 2.5 - NAT -->
+      <!-- ==================== SEÇÃO 2.5 - NAT ==================== -->
       <section id="secao2-5" class="section">
         <h2 class="section-title">
           <i class="fas fa-exchange-alt"></i>
           <span class="section-number">2.5</span> NAT
         </h2>
         <div class="card">
+          <p>Verificar:</p>
           <div class="terminal">
             <pre>set_ap_nat</pre>
           </div>
+          <p>Ativar / Desativar:</p>
           <div class="terminal">
             <pre>set_ap_nat on</pre>
             <pre>set_ap_nat off</pre>
           </div>
           <div class="alert alert-info">
             <i class="fas fa-info-circle"></i>
-            <span>Normalmente: ON</span>
+            <strong>Normalmente:</strong> ON
           </div>
         </div>
       </section>
 
-      <!-- SEÇÃO 2.6 - POTÊNCIA -->
+      <!-- ==================== SEÇÃO 2.6 - POTÊNCIA ==================== -->
       <section id="secao2-6" class="section">
         <h2 class="section-title">
           <i class="fas fa-signal"></i>
@@ -372,11 +380,11 @@ Connected Clients: 1</pre
           <div class="terminal">
             <pre>set_tx_power 20</pre>
           </div>
-          <p>Faixa permitida: <strong>2 a 20 dBm</strong></p>
+          <p>Faixa: <strong>2 a 20 dBm</strong></p>
         </div>
       </section>
 
-      <!-- SEÇÃO 2.7 - OCULTAR -->
+      <!-- ==================== SEÇÃO 2.7 - OCULTAR REDE ==================== -->
       <section id="secao2-7" class="section">
         <h2 class="section-title">
           <i class="fas fa-eye-slash"></i>
@@ -394,7 +402,7 @@ Connected Clients: 1</pre
         </div>
       </section>
 
-      <!-- SEÇÃO 2.8 - SEGURANÇA -->
+      <!-- ==================== SEÇÃO 2.8 - SEGURANÇA ==================== -->
       <section id="secao2-8" class="section">
         <h2 class="section-title">
           <i class="fas fa-shield-alt"></i>
@@ -407,27 +415,31 @@ Connected Clients: 1</pre
             <pre>set_ap_auth wpa2wpa3</pre>
           </div>
           <table class="table-custom">
-            <tr>
-              <th>Modo</th>
-              <th>Descrição</th>
-            </tr>
-            <tr>
-              <td>wpa2</td>
-              <td>WPA2 padrão</td>
-            </tr>
-            <tr>
-              <td>wpa3</td>
-              <td>WPA3 mais seguro</td>
-            </tr>
-            <tr>
-              <td>wpa2wpa3</td>
-              <td>Modo híbrido</td>
-            </tr>
+            <thead>
+              <tr>
+                <th>Modo</th>
+                <th>Descrição</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>wpa2</td>
+                <td>WPA2 padrão</td>
+              </tr>
+              <tr>
+                <td>wpa3</td>
+                <td>WPA3 mais seguro</td>
+              </tr>
+              <tr>
+                <td>wpa2wpa3</td>
+                <td>Modo híbrido</td>
+              </tr>
+            </tbody>
           </table>
         </div>
       </section>
 
-      <!-- SEÇÃO 2.9 - CONTROLE MAC -->
+      <!-- ==================== SEÇÃO 2.9 - CONTROLE DE MAC ==================== -->
       <section id="secao2-9" class="section">
         <h2 class="section-title">
           <i class="fas fa-fingerprint"></i>
@@ -445,17 +457,19 @@ Connected Clients: 1</pre
         </div>
       </section>
 
-      <!-- SEÇÃO 2.10 - PORT FORWARD -->
+      <!-- ==================== SEÇÃO 2.10 - PORT FORWARD ==================== -->
       <section id="secao2-10" class="section">
         <h2 class="section-title">
           <i class="fas fa-forward"></i>
           <span class="section-number">2.10</span> Port Forward
         </h2>
         <div class="card">
+          <p>Exemplo:</p>
           <div class="terminal">
             <pre>portmap add TCP 8080 192.168.4.10 80</pre>
           </div>
-          <div class="ascii-arch">
+          <p><strong>Resultado:</strong></p>
+          <div class="ascii-art">
             <pre>
 IP externo:8080
        ↓
@@ -465,20 +479,14 @@ IP externo:8080
         </div>
       </section>
 
-      <!-- SEÇÃO 2.11 - FIREWALL -->
+      <!-- ==================== SEÇÃO 2.11 - FIREWALL ==================== -->
       <section id="secao2-11" class="section">
         <h2 class="section-title">
           <i class="fas fa-fire"></i>
           <span class="section-number">2.11</span> Firewall ACL
         </h2>
         <div class="card">
-          <p>Listas disponíveis:</p>
-          <ul>
-            <li><code>to_esp</code></li>
-            <li><code>from_esp</code></li>
-            <li><code>to_ap</code></li>
-            <li><code>from_ap</code></li>
-          </ul>
+          <p><strong>Listas disponíveis:</strong> to_esp, from_esp, to_ap, from_ap</p>
           <p>Permitir:</p>
           <div class="terminal">
             <pre>acl to_ap TCP any any allow</pre>
@@ -490,7 +498,7 @@ IP externo:8080
         </div>
       </section>
 
-      <!-- SEÇÃO 2.12 - WEB UI -->
+      <!-- ==================== SEÇÃO 2.12 - WEB INTERFACE ==================== -->
       <section id="secao2-12" class="section">
         <h2 class="section-title">
           <i class="fas fa-globe"></i>
@@ -505,14 +513,14 @@ IP externo:8080
           <div class="terminal">
             <pre>web_ui enable</pre>
           </div>
-          <p>Definir porta:</p>
+          <p>Porta:</p>
           <div class="terminal">
             <pre>web_ui port 80</pre>
           </div>
         </div>
       </section>
 
-      <!-- SEÇÃO 2.13 - CONSOLE REMOTO -->
+      <!-- ==================== SEÇÃO 2.13 - CONSOLE REMOTO ==================== -->
       <section id="secao2-13" class="section">
         <h2 class="section-title">
           <i class="fas fa-terminal"></i>
@@ -523,7 +531,7 @@ IP externo:8080
           <div class="terminal">
             <pre>remote_console enable</pre>
           </div>
-          <p>Porta padrão: <strong>2323</strong></p>
+          <p>Porta: <strong>2323</strong></p>
           <p>Conectar:</p>
           <div class="terminal">
             <pre>telnet 192.168.4.1 2323</pre>
@@ -531,7 +539,7 @@ IP externo:8080
         </div>
       </section>
 
-      <!-- SEÇÃO 2.14 - VPN -->
+      <!-- ==================== SEÇÃO 2.14 - WIREGUARD VPN ==================== -->
       <section id="secao2-14" class="section">
         <h2 class="section-title">
           <i class="fas fa-lock"></i>
@@ -542,16 +550,11 @@ IP externo:8080
           <div class="terminal">
             <pre>set_vpn</pre>
           </div>
-          <p>Permite:</p>
-          <ul>
-            <li>Tunelamento</li>
-            <li>Acesso remoto</li>
-            <li>Proteção de tráfego</li>
-          </ul>
+          <p>Permite: Tunelamento, Acesso remoto, Proteção de tráfego</p>
         </div>
       </section>
 
-      <!-- SEÇÃO 2.15 - ESTATÍSTICAS -->
+      <!-- ==================== SEÇÃO 2.15 - ESTATÍSTICAS ==================== -->
       <section id="secao2-15" class="section">
         <h2 class="section-title">
           <i class="fas fa-chart-bar"></i>
@@ -569,20 +572,20 @@ IP externo:8080
         </div>
       </section>
 
-      <!-- SEÇÃO 2.16 - REINÍCIO E RESET -->
+      <!-- ==================== SEÇÃO 2.16 - REINÍCIO E RESET ==================== -->
       <section id="secao2-16" class="section">
         <h2 class="section-title">
           <i class="fas fa-power-off"></i>
-          <span class="section-number">2.16</span> Reinício e Reset
+          <span class="section-number">2.16</span> Reinício e Reset de Fábrica
         </h2>
         <div class="card">
-          <p>Reiniciar:</p>
+          <p>Reinício:</p>
           <div class="terminal">
             <pre>restart</pre>
           </div>
           <div class="alert alert-danger">
             <i class="fas fa-exclamation-triangle"></i>
-            <span><strong>Reset de fábrica</strong> — Apaga TODAS as configurações:</span>
+            <strong>Reset de Fábrica</strong> — Apaga tudo:
           </div>
           <div class="terminal">
             <pre>factory_reset</pre>
@@ -590,35 +593,37 @@ IP externo:8080
         </div>
       </section>
 
-      <!-- SEÇÃO 3.1 - CENÁRIOS -->
+      <!-- ==================== SEÇÃO 3.1 - CENÁRIOS PRÁTICOS ==================== -->
       <section id="secao3-1" class="section">
         <h2 class="section-title">
           <i class="fas fa-chalkboard"></i>
           <span class="section-number">3.1</span> Cenários Práticos
         </h2>
         <div class="card">
-          <div class="ascii-arch">
+          <div class="ascii-art">
             <pre>
-┌─────────────────────────────────────────────────────────┐
-│  Hotspot doméstico                                      │
-│  Sousa 2 → ESP32 → KaliSonic                            │
-├─────────────────────────────────────────────────────────┤
-│  Laboratório                                            │
-│  Internet → ESP32 → Dispositivos IoT                    │
-├─────────────────────────────────────────────────────────┤
-│  Rede para Eventos                                      │
-│  Internet principal → ESP32 → Rede temporária           │
-├─────────────────────────────────────────────────────────┤
-│  Gateway VPN                                            │
-│  Internet → ESP32 → WireGuard → Clientes                │
-└─────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────┐
+│                                                             │
+│   Hotspot doméstico                                         │
+│   Sousa 2 → ESP32 → KaliSonic                              │
+│                                                             │
+│   Laboratório                                               │
+│   Internet → ESP32 → Dispositivos IoT                      │
+│                                                             │
+│   Rede para Eventos                                         │
+│   Internet principal → ESP32 → Rede temporária             │
+│                                                             │
+│   Gateway VPN                                               │
+│   Internet → ESP32 → WireGuard → Clientes                  │
+│                                                             │
+└─────────────────────────────────────────────────────────────┘
                 </pre
             >
           </div>
         </div>
       </section>
 
-      <!-- SEÇÃO 3.2 - LIMITAÇÕES -->
+      <!-- ==================== SEÇÃO 3.2 - LIMITAÇÕES ==================== -->
       <section id="secao3-2" class="section">
         <h2 class="section-title">
           <i class="fas fa-exclamation-triangle"></i>
@@ -627,38 +632,20 @@ IP externo:8080
         <div class="card">
           <div class="alert alert-warning">
             <i class="fas fa-info-circle"></i>
-            <span>O ESP32 <strong>NÃO</strong> é um roteador profissional.</span>
+            <strong>O ESP32 NÃO é um roteador profissional.</strong>
           </div>
-          <table class="table-custom">
-            <tr>
-              <th>Limitação</th>
-              <th>Valor</th>
-            </tr>
-            <tr>
-              <td>Frequência</td>
-              <td>2.4 GHz apenas</td>
-            </tr>
-            <tr>
-              <td>Clientes simultâneos</td>
-              <td>10~20</td>
-            </tr>
-            <tr>
-              <td>Throughput</td>
-              <td>Limitado</td>
-            </tr>
-            <tr>
-              <td>CPU</td>
-              <td>Compartilhada com NAT</td>
-            </tr>
-            <tr>
-              <td>Velocidade típica</td>
-              <td>10 a 30 Mbps</td>
-            </tr>
-          </table>
+          <p><strong>Limites práticos:</strong></p>
+          <ul class="icon-list" style="margin-top: 1rem">
+            <li><i class="fas fa-wifi"></i> 2.4 GHz apenas</li>
+            <li><i class="fas fa-users"></i> 10~20 clientes simultâneos</li>
+            <li><i class="fas fa-tachometer-alt"></i> Throughput limitado</li>
+            <li><i class="fas fa-microchip"></i> CPU compartilhada com NAT</li>
+          </ul>
+          <p><strong>Velocidade típica:</strong> 10 a 30 Mbps — Dependendo do ambiente.</p>
         </div>
       </section>
 
-      <!-- SEÇÃO 3.3 - CONQUISTAS -->
+      <!-- ==================== SEÇÃO 3.3 - CONQUISTAS ==================== -->
       <section id="secao3-3" class="section">
         <h2 class="section-title">
           <i class="fas fa-award"></i>
@@ -666,35 +653,38 @@ IP externo:8080
         </h2>
         <div class="card">
           <i class="fas fa-check-circle" style="font-size: 3rem"></i>
-          <p>Você configurou um dispositivo capaz de:</p>
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem">
-            <div><i class="fas fa-wifi" style="color: var(--primary)"></i> ✓ Receber internet via Wi-Fi</div>
-            <div><i class="fas fa-network-wired"></i> ✓ Criar uma nova rede Wi-Fi</div>
-            <div><i class="fas fa-globe"></i> ✓ Distribuir internet para clientes</div>
-            <div><i class="fas fa-exchange-alt"></i> ✓ Fazer NAT</div>
-            <div><i class="fas fa-address-card"></i> ✓ Fazer DHCP</div>
-            <div><i class="fas fa-forward"></i> ✓ Fazer Port Forward</div>
-            <div><i class="fas fa-shield-alt"></i> ✓ Utilizar Firewall</div>
-            <div><i class="fas fa-lock"></i> ✓ Utilizar VPN</div>
-            <div><i class="fas fa-terminal"></i> ✓ Administrar via CLI</div>
-            <div><i class="fas fa-globe"></i> ✓ Administrar via Web</div>
+          <p style="margin-top: 1rem">Você configurou um dispositivo capaz de:</p>
+          <div class="check-list">
+            <div class="check-list-item"><i class="fas fa-check-circle"></i> Receber internet via Wi-Fi</div>
+            <div class="check-list-item"><i class="fas fa-check-circle"></i> Criar uma nova rede Wi-Fi</div>
+            <div class="check-list-item"><i class="fas fa-check-circle"></i> Distribuir internet para clientes</div>
+            <div class="check-list-item"><i class="fas fa-check-circle"></i> Fazer NAT</div>
+            <div class="check-list-item"><i class="fas fa-check-circle"></i> Fazer DHCP</div>
+            <div class="check-list-item"><i class="fas fa-check-circle"></i> Fazer Port Forward</div>
+            <div class="check-list-item"><i class="fas fa-check-circle"></i> Utilizar Firewall</div>
+            <div class="check-list-item"><i class="fas fa-check-circle"></i> Utilizar VPN</div>
+            <div class="check-list-item"><i class="fas fa-check-circle"></i> Administrar via CLI</div>
+            <div class="check-list-item"><i class="fas fa-check-circle"></i> Administrar via Web</div>
           </div>
           <div class="alert alert-success" style="margin-top: 1.5rem">
             <i class="fas fa-rocket"></i>
-            <span>Na prática, seu ESP32 agora funciona como um <strong>micro-roteador Wi-Fi totalmente operacional!</strong> 🚀</span>
+            <strong>Na prática, seu ESP32 agora funciona como um micro-roteador Wi-Fi totalmente operacional. 🚀</strong>
           </div>
-          <i class="fab fa-linux" style="font-size: 4rem; display: block; text-align: center; margin-top: 1rem"></i>
+          <div style="text-align: center; margin-top: 1.5rem">
+            <i class="fab fa-linux" style="font-size: 3rem; color: var(--primary)"></i>
+          </div>
         </div>
       </section>
     </div>
 
+    <!-- ==================== FOOTER ==================== -->
     <footer>
-      <i class="fab fa-linux"></i> NDG Linux Essentials | Laboratório ESP32 NAT Router - KaliSonic
-      <p style="margin-top: 0.5rem; font-size: 0.8rem">Documentação completa do roteador Wi-Fi baseado em ESP32-WROOM-32U</p>
+      <p><i class="fab fa-linux"></i> NDG Linux Essentials – Laboratório ESP32 NAT Router - KaliSonic</p>
+      <p style="font-size: 0.8rem; margin-top: 0.5rem">Documentação completa do roteador Wi-Fi baseado em ESP32-WROOM-32U</p>
     </footer>
 
     <script>
-      // menu.js
+      // menu.js - Geração automática dos links da sidebar
       class SidebarMenu {
         constructor() {
           this.sidebar = document.getElementById('sidebar')
@@ -713,56 +703,54 @@ IP externo:8080
           navContainer.innerHTML = ''
 
           const iconMap = {
-            '1.0': 'fa-flag-checkered',
-            1.1: 'fa-bullseye',
-            1.2: 'fa-project-diagram',
-            1.3: 'fa-microchip',
-            1.4: 'fa-code',
-            1.5: 'fa-download',
-            2.1: 'fa-sliders-h',
-            2.2: 'fa-check-double',
-            2.3: 'fa-search',
-            2.4: 'fa-pen',
-            2.5: 'fa-exchange-alt',
-            2.6: 'fa-signal',
-            2.7: 'fa-eye-slash',
-            2.8: 'fa-shield-alt',
-            2.9: 'fa-fingerprint',
-            '2.10': 'fa-forward',
-            2.11: 'fa-fire',
-            2.12: 'fa-globe',
-            2.13: 'fa-terminal',
-            2.14: 'fa-lock',
-            2.15: 'fa-chart-bar',
-            2.16: 'fa-power-off',
-            3.1: 'fa-chalkboard',
-            3.2: 'fa-exclamation-triangle',
-            3.3: 'fa-award'
+            '1.0': 'flag-checkered',
+            1.1: 'bullseye',
+            1.2: 'project-diagram',
+            1.3: 'microchip',
+            1.4: 'code',
+            1.5: 'download',
+            2.1: 'sliders-h',
+            2.2: 'check-double',
+            2.3: 'search',
+            2.4: 'pen',
+            2.5: 'exchange-alt',
+            2.6: 'signal',
+            2.7: 'eye-slash',
+            2.8: 'shield-alt',
+            2.9: 'fingerprint',
+            '2.10': 'forward',
+            2.11: 'fire',
+            2.12: 'globe',
+            2.13: 'terminal',
+            2.14: 'lock',
+            2.15: 'chart-bar',
+            2.16: 'power-off',
+            3.1: 'chalkboard',
+            3.2: 'exclamation-triangle',
+            3.3: 'award'
           }
 
           sections.forEach((section) => {
             const id = section.id
-            const match = id.match(/secao(\d+-\d+)/)
-            if (match) {
-              const numero = match[1]
-              const titleEl = section.querySelector('.section-title')
-              let titulo = ''
-              if (titleEl) {
-                const spanNumber = titleEl.querySelector('.section-number')
-                const textContent = titleEl.textContent || ''
-                if (spanNumber) {
-                  titulo = textContent.replace(spanNumber.textContent, '').trim()
-                } else {
-                  titulo = textContent.trim()
-                }
+            const titleEl = section.querySelector('.section-title')
+            let titulo = ''
+            let numero = ''
+
+            if (titleEl) {
+              const spanNumber = titleEl.querySelector('.section-number')
+              if (spanNumber) {
+                numero = spanNumber.textContent
               }
+              const textContent = titleEl.textContent || ''
+              titulo = textContent.replace(numero, '').trim()
+            }
 
-              const icon = iconMap[numero] || 'fa-book'
-
+            if (id && titulo) {
+              const icon = iconMap[numero] || 'book'
               const li = document.createElement('li')
               const a = document.createElement('a')
               a.href = `#${id}`
-              a.innerHTML = `<i class="fas ${icon}"></i> ${numero} ${titulo.substring(0, 40)}`
+              a.innerHTML = `<i class="fas fa-${icon}"></i> ${numero} ${titulo.substring(0, 45)}`
               a.addEventListener('click', (e) => {
                 this.close()
               })
